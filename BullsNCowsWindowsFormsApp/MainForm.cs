@@ -39,6 +39,10 @@ namespace BullsNCowsWindowsFormsApp
 
             int bullsCount = CalculateBullsCount(userNumber);
             int cowsCount = CalculateCowsCount(userNumber);
+
+            bullsCountLabel.Text = "Быков = " + bullsCount;
+            cowsCountLabel.Text = "Коров = " + cowsCount;
+
         }
 
         private int CalculateCowsCount(string userNumber)
