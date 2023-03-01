@@ -50,7 +50,15 @@ namespace BullsNCowsWindowsFormsApp
             bullsCountLabel.Text = "Быков = " + bullsCount;
             cowsCountLabel.Text = "Коров = " + cowsCount;
 
-            mainHistoryTable.Rows.Add(stepCount, userNumber, bullsCount, cowsCount); 
+            mainHistoryTable.Rows.Add(stepCount, userNumber, bullsCount, cowsCount);
+
+            if (bullsCount == numberLength)
+            {
+                MessageBox.Show("Поздравляем. Вы победили за " + stepCount + " шагов ");
+                confirmButton.Enabled = false;
+                userNumberTextBox.Enabled = false;
+            }
+                
         }
 
         private bool isValidNumber(string userNumber)
@@ -63,7 +71,7 @@ namespace BullsNCowsWindowsFormsApp
             
             for (int i = 0; i < userNumber.Length; i++)
             {
-                if (char.IsDigit(userNumber[i]))
+                if (!char.IsDigit(userNumber[i]))
                 {
                     MessageBox.Show("Строка должно содержать только цифры!");
                     return false;
