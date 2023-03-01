@@ -15,6 +15,7 @@ namespace BullsNCowsWindowsFormsApp
     {
         string hiddenNumber = "";
         const int numberLength = 4;
+        int stepCount = 0;
 
         public MainForm()
         {
@@ -42,13 +43,14 @@ namespace BullsNCowsWindowsFormsApp
             {
                 return;
             }
-
+            stepCount++;    
             int bullsCount = CalculateBullsCount(userNumber);
             int cowsCount = CalculateCowsCount(userNumber);
 
             bullsCountLabel.Text = "Быков = " + bullsCount;
             cowsCountLabel.Text = "Коров = " + cowsCount;
 
+            mainHistoryTable.Rows.Add(stepCount, userNumber, bullsCount, cowsCount); 
         }
 
         private bool isValidNumber(string userNumber)
