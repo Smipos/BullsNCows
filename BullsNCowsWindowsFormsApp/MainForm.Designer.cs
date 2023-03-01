@@ -38,7 +38,11 @@
             this.numberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bullsCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cowsCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.restartGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.mainHistoryTable)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // hiddenNumberLabel
@@ -122,6 +126,31 @@
             this.cowsCountColumn.HeaderText = "Коров";
             this.cowsCountColumn.Name = "cowsCountColumn";
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gameToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(764, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // gameToolStripMenuItem
+            // 
+            this.gameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.restartGameToolStripMenuItem});
+            this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
+            this.gameToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.gameToolStripMenuItem.Text = "Game";
+            // 
+            // restartGameToolStripMenuItem
+            // 
+            this.restartGameToolStripMenuItem.Name = "restartGameToolStripMenuItem";
+            this.restartGameToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.restartGameToolStripMenuItem.Text = "Restart Game";
+            this.restartGameToolStripMenuItem.Click += new System.EventHandler(this.restartGameToolStripMenuItem_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,10 +162,14 @@
             this.Controls.Add(this.bullsCountLabel);
             this.Controls.Add(this.userNumberTextBox);
             this.Controls.Add(this.hiddenNumberLabel);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.mainHistoryTable)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,6 +187,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn numberColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bullsCountColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cowsCountColumn;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem gameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem restartGameToolStripMenuItem;
     }
 }
 

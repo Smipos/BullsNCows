@@ -120,5 +120,10 @@ namespace BullsNCowsWindowsFormsApp
             }
             return bullsCount;
         }
+
+        private void restartGameToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }
