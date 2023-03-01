@@ -47,12 +47,31 @@ namespace BullsNCowsWindowsFormsApp
 
         private int CalculateCowsCount(string userNumber)
         {
-            throw new NotImplementedException();
+            int cowsCount = 0;
+
+            for (int i = 0; i < numberLength; i++)
+            {
+                for (int j = 0; j < numberLength; j++)
+                {
+                    if (i == j)
+                        continue;
+                    if (hiddenNumber[i] == userNumber[j])
+                        cowsCount++;
+                }
+            }
+            return cowsCount;
         }
 
         private int CalculateBullsCount(string userNumber)
         {
-            throw new NotImplementedException();
+            int bullsCount = 0;
+
+            for (int i = 0; i < numberLength; i++)
+            {
+                if (hiddenNumber[i] == userNumber[i])
+                    bullsCount++;
+            }
+            return bullsCount;
         }
     }
 }
