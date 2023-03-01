@@ -33,6 +33,12 @@
             this.bullsCountLabel = new System.Windows.Forms.Label();
             this.cowsCountLabel = new System.Windows.Forms.Label();
             this.confirmButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.StepColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numberColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bullsCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cowsCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // hiddenNumberLabel
@@ -83,11 +89,45 @@
             this.confirmButton.UseVisualStyleBackColor = true;
             this.confirmButton.Click += new System.EventHandler(this.confirmButton_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.StepColumn,
+            this.numberColumn,
+            this.bullsCountColumn,
+            this.cowsCountColumn});
+            this.dataGridView1.Location = new System.Drawing.Point(322, 1);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(444, 450);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // StepColumn
+            // 
+            this.StepColumn.HeaderText = "Ход";
+            this.StepColumn.Name = "StepColumn";
+            // 
+            // numberColumn
+            // 
+            this.numberColumn.HeaderText = "Число";
+            this.numberColumn.Name = "numberColumn";
+            // 
+            // bullsCountColumn
+            // 
+            this.bullsCountColumn.HeaderText = "Быков";
+            this.bullsCountColumn.Name = "bullsCountColumn";
+            // 
+            // cowsCountColumn
+            // 
+            this.cowsCountColumn.HeaderText = "Коров";
+            this.cowsCountColumn.Name = "cowsCountColumn";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(764, 450);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.confirmButton);
             this.Controls.Add(this.cowsCountLabel);
             this.Controls.Add(this.bullsCountLabel);
@@ -96,6 +136,7 @@
             this.Name = "MainForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.MainForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,6 +149,11 @@
         private System.Windows.Forms.Label bullsCountLabel;
         private System.Windows.Forms.Label cowsCountLabel;
         private System.Windows.Forms.Button confirmButton;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StepColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn numberColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bullsCountColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cowsCountColumn;
     }
 }
 

@@ -61,6 +61,15 @@ namespace BullsNCowsWindowsFormsApp
             
             for (int i = 0; i < userNumber.Length; i++)
             {
+                if (char.IsDigit(userNumber[i]))
+                {
+                    MessageBox.Show("Строка должно содержать только цифры!");
+                    return false;
+                }
+            }
+
+            for (int i = 0; i < userNumber.Length; i++)
+            {
                 for (int j = i + 1; j < userNumber.Length; j++)
                 {
                     if (userNumber[i] == userNumber[j])
