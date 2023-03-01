@@ -49,14 +49,14 @@
             // 
             this.userNumberTextBox.Location = new System.Drawing.Point(54, 102);
             this.userNumberTextBox.Name = "userNumberTextBox";
-            this.userNumberTextBox.Size = new System.Drawing.Size(100, 20);
+            this.userNumberTextBox.Size = new System.Drawing.Size(109, 20);
             this.userNumberTextBox.TabIndex = 1;
             // 
             // bullsCountLabel
             // 
             this.bullsCountLabel.AutoSize = true;
             this.bullsCountLabel.Font = new System.Drawing.Font("Lucida Console", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bullsCountLabel.Location = new System.Drawing.Point(54, 156);
+            this.bullsCountLabel.Location = new System.Drawing.Point(50, 142);
             this.bullsCountLabel.Name = "bullsCountLabel";
             this.bullsCountLabel.Size = new System.Drawing.Size(127, 21);
             this.bullsCountLabel.TabIndex = 2;
@@ -66,7 +66,7 @@
             // 
             this.cowsCountLabel.AutoSize = true;
             this.cowsCountLabel.Font = new System.Drawing.Font("Lucida Console", 15.75F);
-            this.cowsCountLabel.Location = new System.Drawing.Point(54, 193);
+            this.cowsCountLabel.Location = new System.Drawing.Point(50, 177);
             this.cowsCountLabel.Name = "cowsCountLabel";
             this.cowsCountLabel.Size = new System.Drawing.Size(127, 21);
             this.cowsCountLabel.TabIndex = 3;
@@ -75,7 +75,7 @@
             // confirmButton
             // 
             this.confirmButton.Font = new System.Drawing.Font("Lucida Console", 15.75F);
-            this.confirmButton.Location = new System.Drawing.Point(223, 98);
+            this.confirmButton.Location = new System.Drawing.Point(182, 102);
             this.confirmButton.Name = "confirmButton";
             this.confirmButton.Size = new System.Drawing.Size(75, 35);
             this.confirmButton.TabIndex = 4;

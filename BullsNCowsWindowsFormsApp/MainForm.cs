@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,12 +38,39 @@ namespace BullsNCowsWindowsFormsApp
         {
             string userNumber = userNumberTextBox.Text;
 
+            if (!isValidNumber(userNumber))
+            {
+                return;
+            }
+
             int bullsCount = CalculateBullsCount(userNumber);
             int cowsCount = CalculateCowsCount(userNumber);
 
             bullsCountLabel.Text = "Быков = " + bullsCount;
             cowsCountLabel.Text = "Коров = " + cowsCount;
 
+        }
+
+        private bool isValidNumber(string userNumber)
+        {
+            if (userNumber.Length != numberLength)
+            {
+                MessageBox.Show("Число должно состоять из 4 цифр!");
+                return false;
+            }
+            
+            for (int i = 0; i < userNumber.Length; i++)
+            {
+                for (int j = i + 1; j < userNumber.Length; j++)
+                {
+                    if (userNumber[i] == userNumber[j])
+                    {
+                        MessageBox.Show("Число должно состоять из уникальных цифр!");
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
 
         private int CalculateCowsCount(string userNumber)
